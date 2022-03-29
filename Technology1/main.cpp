@@ -63,6 +63,7 @@ void chosen_class(T* q, int n_q)
 			if (q[index].isEmpty()){
 				cout << "Очередь пуста, выводить нечего.\n" << endl;
 				system("pause");
+				system("cls");
 				break;
 			}
 			else{
@@ -98,7 +99,7 @@ void chosen_class(T* q, int n_q)
 			break;
 		case 6: //вставка копии очереди
 			system("cls");
-			cout << "Введите номер очереди, куда ходить скопировать данные с буффера ";
+			cout << "Введите номер очереди (от 0 до " << n_q-1<< "), куда хотите скопировать данные с буффера: ";
 			cin >> chosen_q;
 			if (chosen_q < 0 || chosen_q >= n_q){
 				cout << "Введен некорректный номер очереди" << endl;
@@ -121,11 +122,19 @@ void chosen_class(T* q, int n_q)
 				if ((chosen_q < 0) || (chosen_q >= n_q) || (chosen_q == index)){
 					cout << "Некорректное значение!\n" << endl;
 					system("pause");
+					system("cls");
 					break;
 				}
 				if (q[chosen_q].isEmpty()){
-					cout << "Невозможно произвести слияние, так как вторая очередь пуста.\n" << endl;
+					cout << "Бессмысленно производить слияние, так как вторая очередь пуста.\n" << endl;
 					system("pause");
+					system("cls");
+					break;
+				}
+				if (q[index].isEmpty()) {
+					cout << "Бессмысленно производить слияние, так как первая очередь пуста.\n" << endl;
+					system("pause");
+					system("cls");
 					break;
 				}
 				system("cls");
