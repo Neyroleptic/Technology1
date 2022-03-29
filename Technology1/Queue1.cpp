@@ -6,10 +6,7 @@ using namespace std;
 float sonQueue_private::harmonicMean()
 {
 	Unit* last = get_last();
-	float max = get_last()->data;
-	float min = get_last()->data;
 	float result = 0;
-	float delta = 0;
 	float sum = 0;
 
 	if (size == 0){
