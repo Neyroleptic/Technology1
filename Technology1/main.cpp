@@ -230,7 +230,8 @@ int main()
 		}
 	}
 	return 0;
-	//for i in getnrk g
-	//dsfm skf
-	//fsdklf j
+	for (int i = 0; i < 10; i++)
+	{
+		printf("aa");
+	}
 }
